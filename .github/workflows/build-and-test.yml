@@ -4,8 +4,13 @@ name: "build and test"
 # 触发条件
 on:
   push:
-    # 分支
-    branches: [ master ]
+    # 分支，!谈话表示否定，该分支不触发
+    branches:
+    - master
+    - 'dev'
+    - 'develop'
+    - '!feature/*'
+
   pull_request:
     branches: [ master ]
 

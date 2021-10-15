@@ -4,11 +4,21 @@ name: "publish nuget"
 # 触发条件
 on: 
   push:
+    # 分支，!谈话表示否定，该分支不触发
+    branches:
+    - master
+    - '!releases/**-alpha'
+    - '!dev'
+    - '!develop'
+    - '!feature/*'
+
     # 指定格式的标签，正则表达式 v开头，后面是数字
     tags:
     - '[vV][1-9]+.[0-9]+.[0-9]+'
-    # 分支
-    branches: [ master ]
+
+    # 忽略的分支 ,不能和分支branches标记同时使用
+    #branches-ignore:
+    #- dev
 
 # 作业
 jobs:
