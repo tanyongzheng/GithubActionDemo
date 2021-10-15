@@ -51,5 +51,5 @@ jobs:
       run: dotnet pack src/GithubActionToNuget/GithubActionToNuget.csproj --include-source /p:Configuration=Release --output nuget_pkgs
 
       # 发布到Nuget 使用带符号标记symbols的包
-    # - name: Publish GithubActionToNuget To Nuget 
-    #   run: dotnet nuget push nuget_pkgs/GithubActionToNuget.*.symbols.nupkg -k $NuGet_Key -s $NuGet_Url --skip-duplicate
+    - name: Publish GithubActionToNuget To Nuget 
+      run: dotnet nuget push nuget_pkgs/GithubActionToNuget.*.symbols.nupkg -k ${{ secrets.NUGET_KEY }} -s ${{ secrets.NUGET_URL }} --skip-duplicate
