@@ -4,11 +4,11 @@ name: "publish nuget"
 # 触发条件
 on: 
   push:
-    # 分支
-    branches: [ master ]
     # 指定格式的标签，正则表达式 v开头，后面是数字
     tags:
     - '[vV][1-9]+.[0-9]+.[0-9]+'
+    # 分支
+    branches: [ master ]
 
 # 作业
 jobs:
