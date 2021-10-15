@@ -1,0 +1,45 @@
+# Action名字
+name: "publish nuget"
+
+# 触发条件
+on: 
+  push:
+    # 分支
+    branches: [ master ]
+    # 指定格式的标签，正则表达式 v开头，后面是数字
+    tags:
+    - '[vV][1-9]+.[0-9]+.[0-9]+'
+
+# 作业
+jobs:
+
+# 作业名
+  publish-nuget:
+
+  # 运行系统
+    runs-on: windows-latest
+
+    # 运行步骤
+    steps:
+
+    # 使用github自带的action，检出指定的分支到Workflow的工作区
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+
+    # 安装dotnet运行环境 ,并带上版本号
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: 5.0.302
+        
+      # 生成项目  Release模式
+    - name: Build
+      run: dotnet build --configuration Release
+
+      # 打包
+    - name: Pack GithubActionToNuget
+      run: dotnet pack src/GithubActionToNuget/GithubActionToNuget.csproj --include-source /p:Configuration=Release --output nuget_pkgs
+
+      # 发布到Nuget 使用带符号标记symbols的包
+    # - name: Publish GithubActionToNuget To Nuget 
+    #   run: dotnet nuget push nuget_pkgs/GithubActionToNuget.*.symbols.nupkg -k $NuGet_Key -s $NuGet_Url --skip-duplicate
