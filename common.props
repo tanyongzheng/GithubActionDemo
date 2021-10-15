@@ -1,0 +1,28 @@
+<Project>
+
+  <!-- Abp相关配置 -->
+  <Import Project="abp.props"></Import>
+  <Import Project="abpvnext.props"></Import>
+
+  <!-- 编译设置 -->
+  <PropertyGroup>
+    <!-- 使用c#最新版本 --> 
+    <LangVersion>latest</LangVersion>
+    <!-- 忽略哪些编译警告 -->
+    <NoWarn>$(NoWarn);CS1591;NU1603</NoWarn>
+    <!-- 生成xml注释文件 -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- Package 相关设置 -->
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryType>git</RepositoryType>
+	  <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+	  <ReleaseNotes></ReleaseNotes>
+	  <Description>Github Action Demo</Description>
+  </PropertyGroup>
+
+</Project>

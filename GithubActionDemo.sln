@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.src", "1.src", "{95C39C6F-2499-4045-A9C3-F6EA38BC4CE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.test", "2.test", "{50C7B1BE-469F-458C-BAD1-807FC53C9EFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{B7E95A25-6838-4731-9549-003715B8DFA3}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		abp.props = abp.props
+		abpvnext.props = abpvnext.props
+		common.props = common.props
+		common.test.props = common.test.props
+		configureawait.props = configureawait.props
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubActionToNuget", "src\GithubActionToNuget\GithubActionToNuget.csproj", "{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubActionToNuget.Tests", "test\GithubActionToNuget.Tests\GithubActionToNuget.Tests.csproj", "{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D43E227-3DBF-44A7-B5B4-C4FA48F34542} = {95C39C6F-2499-4045-A9C3-F6EA38BC4CE2}
+		{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A} = {50C7B1BE-469F-458C-BAD1-807FC53C9EFF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B42A86BB-4864-4430-A267-03954F7FF459}
+	EndGlobalSection
+EndGlobal
