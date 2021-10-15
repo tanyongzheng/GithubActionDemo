@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solut
 		.gitignore = .gitignore
 		abp.props = abp.props
 		abpvnext.props = abpvnext.props
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
 		common.props = common.props
 		common.test.props = common.test.props
 		configureawait.props = configureawait.props
@@ -19,9 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solut
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubActionToNuget", "src\GithubActionToNuget\GithubActionToNuget.csproj", "{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubActionToNuget", "src\GithubActionToNuget\GithubActionToNuget.csproj", "{2D43E227-3DBF-44A7-B5B4-C4FA48F34542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubActionToNuget.Tests", "test\GithubActionToNuget.Tests\GithubActionToNuget.Tests.csproj", "{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubActionToNuget.Tests", "test\GithubActionToNuget.Tests\GithubActionToNuget.Tests.csproj", "{ABADB9A3-4A14-48A9-A8A1-8C3FFA81905A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

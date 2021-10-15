@@ -1,0 +1,48 @@
+# Action名字
+name: "build and test"
+
+# 触发条件
+on:
+  push:
+    # 分支
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# 作业
+jobs:
+
+# 作业名
+  build-test:
+
+  # 运行系统
+    runs-on: windows-latest
+
+    # 运行步骤
+    steps:
+
+    # 使用github自带的action，检出指定的分支到Workflow的工作区
+    - name: Check out Git repository
+      uses: actions/checkout@v2
+
+    # 安装dotnet运行环境 ,并带上版本号
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@master
+      with:
+        dotnet-version: 5.0.302
+        
+      # 构建
+#    - name: Build with dotnet
+#      run: dotnet build --configuration Release
+
+      # 恢复项目的依赖项
+    - name: Restore dependencies
+      run: dotnet restore
+
+      # 生成项目  Release模式
+    - name: Build
+      run: dotnet build --no-restore Release
+
+      # 单元测试
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
