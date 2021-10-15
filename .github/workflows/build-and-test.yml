@@ -42,7 +42,6 @@ jobs:
       # 生成项目  Release模式
     - name: Build
       run: dotnet build --no-restore --configuration Release
-
       # 单元测试
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build
