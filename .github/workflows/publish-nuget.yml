@@ -52,4 +52,4 @@ jobs:
 
       # 发布到Nuget 使用带符号标记symbols的包
     - name: Publish GithubActionToNuget To Nuget 
-      run: dotnet nuget push nuget_pkgs/GithubActionToNuget.*.symbols.nupkg -k ${{ secrets.NUGET_KEY }} -s ${{ secrets.NUGET_URL }} --skip-duplicate
+      run: dotnet nuget push nuget_pkgs/GithubActionToNuget.***.symbols.nupkg -k ${{ secrets.NUGET_KEY }} -s ${{ secrets.NUGET_URL }} --skip-duplicate
